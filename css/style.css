@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body {
+    background: #cccccc url(img/bg.png) top left repeat-x;
+}
+#topo,
+#corpo {
+    width: 980px;
+    margin: 0 auto;
+}
+
+#topo {
+    height: 265px;
+    position: relative;
+}
+
+#topo h1 {
+    text-indent: -9999px;
+    height: 154px;
+    width: 530px;
+    background: url(img/logo.png) top left no-repeat;
+    top: 40px;
+    left: 280px;
+    position: absolute;
+}
+
+#lutz {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+}
+
+#corpo form {
+    width: 530px;
+    margin-left: 280px;
+}
+
+#corpo form label {
+    font-family: Verdana;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333333;
+    margin: 10px 0;
+    display: block;
+}
+
+#corpo form textarea {
+    border: 8px solid #f4ad00;
+    width: 508px;
+    padding: 5px;
+    color: #f4ad00;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#corpo form input {
+    background: #333333;
+    color: #f4ad00;
+    padding: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+    float: right;
+}
+
+#resultado {
+    clear: both;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt">
+<head>
+    <title>LUTZFY</title>
+    <meta charset="utf-8">
+    <meta name="description" content="LUTZFY, porquê você sempre sonhou em falar como um Lutz!" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="topo">
+        <h1>LUTZFY</h1>
+        <img id="lutz" src="img/lutz.png" />
+    </div>
+    <div id="corpo">
+        <form>
+            <label for="texto">Coloque abaixo o texto que deverá ser LUTZFICADO:</label>
+            <textarea id="texto" name="texto" rows="7" cols="70"></textarea>
+            <input type="button" id="lutfy" value="LUTZFY!">
+            <textarea id="resultado" name="resultado" rows="7" cols="70"></textarea>
+        </form>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#lutfy').click(function() {
+                $.post(
+                    'lutzfy.php',
+                    {texto: $('#texto').val()},
+                    function(data) {
+                        $('#resultado')
+                            .show()
+                            .val(data);
+                    }
+                );
+            })
+        });
+    </script>
+</body>
+</html>
